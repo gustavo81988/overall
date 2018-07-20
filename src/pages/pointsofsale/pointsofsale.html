@@ -9,8 +9,8 @@
       <ion-item-sliding *ngFor="let posGroup of posCollection">
         <button 
           ion-item
-          [navPush]="quotesPage"
-          [navParams]="quoteGroup"
+          [navPush]="pointofsalePage"
+          [navParams]="posGroup"
         >
         <ion-avatar item-start>
             <img src="./assets/imgs/{{posGroup.icon}}">

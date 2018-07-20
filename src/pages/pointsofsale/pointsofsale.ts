@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import pos from '../../data/pos';
+import { PointofsalePage } from '../pointofsale/pointofsale';
 
 @IonicPage()
 @Component({
@@ -8,12 +9,12 @@ import pos from '../../data/pos';
   templateUrl: 'pointsofsale.html',
 })
 export class PointsofsalePage {
-  posCollection;
-
+  posCollection
+  pointofsalePage:PointofsalePage
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ngOnInit(){
     this.posCollection = pos;
-    console.log(pos[0].employees)
   }
 }
