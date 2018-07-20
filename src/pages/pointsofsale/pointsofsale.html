@@ -4,22 +4,22 @@
     </ion-navbar>
   </ion-header>
   <ion-content padding>
-    <h3 text-center>Select your favorite Quote</h3>
+    <h3 text-center>Seleccione el punto a modificar</h3>
     <ion-list>
       <ion-item-sliding *ngFor="let posGroup of posCollection">
-      <ion-item>
         <button 
-          ion-item 
+          ion-item
           [navPush]="quotesPage"
           [navParams]="quoteGroup"
         >
-          <ion-icon [name]="posGroup.icon" item-left></ion-icon>
+        <ion-avatar item-start>
+            <img src="./assets/imgs/{{posGroup.icon}}">
+          </ion-avatar>
           <h2>{{ posGroup.name | uppercase }}</h2>
           <p>Requeridos {{ posGroup.required }} </p>
           <p>Disponibles {{ posGroup.employees.length }} </p>
           <p>Diferencia {{ posGroup.required - posGroup.employees.length }} </p>
         </button>
-      </ion-item>
       <ion-item-options side="left">
           <button ion-button color="secondary">
             <ion-icon name="add"></ion-icon>

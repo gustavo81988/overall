@@ -1,7 +1,7 @@
 export default [
     {
       name: 'Plazavea',
-      icon: 'brush',
+      icon: 'plazavea.jpg',
       required: 4,
       employees: [
         {
@@ -23,7 +23,7 @@ export default [
     },
     {
         name: 'Tottus',
-        icon: 'brush',
+        icon: 'totus.png',
         required: 5,
         employees: [
           {
@@ -45,7 +45,7 @@ export default [
       },
       {
         name: 'Metro',
-        icon: 'brush',
+        icon: 'metro.png',
         required: 5,
         employees: [
           {
