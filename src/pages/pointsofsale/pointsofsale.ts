@@ -14,6 +14,6 @@ export class PointsofsalePage {
 
   ngOnInit(){
     this.posCollection = pos;
-    console.log(pos)
+    console.log(pos[0].employees)
   }
 }

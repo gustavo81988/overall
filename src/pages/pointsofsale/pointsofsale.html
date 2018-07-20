@@ -14,6 +14,9 @@
       >
         <ion-icon [name]="posGroup.icon" item-left></ion-icon>
         <h2>{{ posGroup.name | uppercase }}</h2>
+        <p>Requeridos {{ posGroup.required }} </p>
+        <p>Disponibles {{ posGroup.employees.length }} </p>
+        <p>Diferencia {{ posGroup.required - posGroup.employees.length }} </p>
       </button>
     </ion-list>
   </ion-content>

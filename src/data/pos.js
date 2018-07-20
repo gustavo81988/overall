@@ -2,6 +2,7 @@ export default [
     {
       name: 'Plazavea',
       icon: 'brush',
+      required: 4,
       employees: [
         {
           id: '1',
@@ -23,6 +24,7 @@ export default [
     {
         name: 'Tottus',
         icon: 'brush',
+        required: 5,
         employees: [
           {
             id: '1',
@@ -44,6 +46,7 @@ export default [
       {
         name: 'Metro',
         icon: 'brush',
+        required: 5,
         employees: [
           {
             id: '1',
