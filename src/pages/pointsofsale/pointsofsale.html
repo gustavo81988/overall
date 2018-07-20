@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Puntos de venta</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <h3 text-center>Select your favorite Quote</h3>
+    <ion-list>
+      <button 
+        ion-item 
+        *ngFor="let posGroup of posCollection"
+        [navPush]="quotesPage"
+        [navParams]="quoteGroup"
+      >
+        <ion-icon [name]="posGroup.icon" item-left></ion-icon>
+        <h2>{{ posGroup.name | uppercase }}</h2>
+      </button>
+    </ion-list>
+  </ion-content>
+  

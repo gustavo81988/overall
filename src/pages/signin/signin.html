@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesion</ion-title>
+  </ion-navbar>
+</ion-header>
+  <ion-content padding>
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>Correo</ion-label>
+          <ion-input
+            type="email"
+            name="email"
+            required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Password</ion-label>
+          <ion-input
+            type="password"
+            name="password"
+            required></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button block (click)="logIn()">Enviar</button>
+    </form>
+  </ion-content>
+  
