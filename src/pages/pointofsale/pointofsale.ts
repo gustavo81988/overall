@@ -10,7 +10,7 @@ export class PointofsalePage implements OnInit{
   posGroup;
 
   ngOnInit(){
-    this.posGroup = this.navParams.data;
+    this.posGroup = this.navParams.data
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

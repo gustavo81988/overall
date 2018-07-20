@@ -1,18 +1,24 @@
-<!--
-  Generated template for the PointofsalePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>pointofsale</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+    <ion-navbar>
+      <ion-title>{{ posGroup.name | uppercase }}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <ion-card 
+      *ngFor = "let quote of posGroup.employees;let i  = index"
+    >
+      <ion-card-header>
+        #{{ i+1 }}
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ posGroup.text }}</p>
+        <p class="author">{{ quote.person }}</p>
+        <ion-row>
+          <ion-col text-left>
+              {{ quote.position }}
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+  

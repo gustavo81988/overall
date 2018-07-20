@@ -10,11 +10,14 @@ import { PointofsalePage } from '../pointofsale/pointofsale';
 })
 export class PointsofsalePage {
   posCollection
-  pointofsalePage:PointofsalePage
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ngOnInit(){
     this.posCollection = pos;
+  }
+
+  onLoadPos(posGroup){
+    this.navCtrl.push(PointofsalePage,posGroup)
   }
 }
