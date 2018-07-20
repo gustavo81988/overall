@@ -6,18 +6,31 @@
   <ion-content padding>
     <h3 text-center>Select your favorite Quote</h3>
     <ion-list>
-      <button 
-        ion-item 
-        *ngFor="let posGroup of posCollection"
-        [navPush]="quotesPage"
-        [navParams]="quoteGroup"
-      >
-        <ion-icon [name]="posGroup.icon" item-left></ion-icon>
-        <h2>{{ posGroup.name | uppercase }}</h2>
-        <p>Requeridos {{ posGroup.required }} </p>
-        <p>Disponibles {{ posGroup.employees.length }} </p>
-        <p>Diferencia {{ posGroup.required - posGroup.employees.length }} </p>
-      </button>
+      <ion-item-sliding *ngFor="let posGroup of posCollection">
+      <ion-item>
+        <button 
+          ion-item 
+          [navPush]="quotesPage"
+          [navParams]="quoteGroup"
+        >
+          <ion-icon [name]="posGroup.icon" item-left></ion-icon>
+          <h2>{{ posGroup.name | uppercase }}</h2>
+          <p>Requeridos {{ posGroup.required }} </p>
+          <p>Disponibles {{ posGroup.employees.length }} </p>
+          <p>Diferencia {{ posGroup.required - posGroup.employees.length }} </p>
+        </button>
+      </ion-item>
+      <ion-item-options side="left">
+          <button ion-button color="secondary">
+            <ion-icon name="add"></ion-icon>
+            Asignar
+          </button>
+          <button ion-button color="danger">
+            <ion-icon name="close"></ion-icon>
+            Eliminar
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
     </ion-list>
-  </ion-content>
+</ion-content>
   
